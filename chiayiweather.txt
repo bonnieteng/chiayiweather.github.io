@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>《嘉義縣水利處即時氣象情資彙整》</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 100vh; /* 設置為視口高度，保證不出現捲軸 */
+            border: none;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+   
+    
+    <div class="section">
+        <span style="font-size:32pt;font-weight:bolder;text-align:center; width: 100%;display: inline-block">《嘉義縣水利處防洪即時氣象情資彙整》
+        <span style="font-size:14pt;font-weight:bolder;text-align:center; width: 95%;display: inline-block">即時監測與預警/雷達回波雨量推估與鄉鎮預警/推估未來一小時會發生大雨鄉鎮列表/雨量資訊/雨量預報(10min/1hr/3hr/6hr)/風速監測與預警/縣市監測看板/雷達回波/衛星雲圖/防災降雨雷達_雨量推估/各延時累積雨量圖/分析預測圖/12小時定量降水預報/波浪分析圖/天氣概況<br>*******天氣系統+衛星雲圖+雷達+現在天氣預報天氣+雨量+風力*******</span>
+        <iframe src="https://watch.ncdr.nat.gov.tw/watch_page_nowcast_v2" style="height: 6560px; overflow:hidden;" scrolling="no" onload="checkIframe(this)"></iframe>
+        <iframe src="https://www.cwa.gov.tw/V8/C/W/OBS_Radar_rain.html" style="height: 2000px; overflow:hidden" scrolling="no" onload="checkIframe(this)"></iframe>
+        <iframe src="https://www.cwa.gov.tw/V8/C/W/OBS_Sat.html" style="height: 1280px; overflow:hidden;" scrolling="no"onload="checkIframe(this)"></iframe>
+        <iframe src="https://watch.ncdr.nat.gov.tw/watch_qpeqpn" style="height: 1500px; overflow:hidden;" scrolling="no"onload="checkIframe(this)"></iframe>
+        <iframe src="https://www.cwa.gov.tw/V8/C/W/analysis.html" style="height:5130px; overflow:hidden;" scrolling="no" onload="checkIframe(this)"></iframe>
+        <iframe src="https://www.cwa.gov.tw/V8/C/W/index.html" style="height: 1100px; overflow:hidden;" scrolling="no" onload="checkIframe(this)"></iframe>
+    </div>
+    
+    <div class="section">
+        <span style="font-size:32pt;font-weight:bolder;text-align:center; width: 100%;display: inline-block">《未來天氣預報》
+        <span style="font-size:12pt;font-weight:bolder;text-align:center; width: 95%;display: inline-block">定量降水預報(改成6小時預報圖)/潮高預報圖(改成嘉義縣：東石or塭港潮位站)/潮位站時序變化圖/水利署防災資訊服務網/嘉義縣智慧為汛網/最新天氣圖資/» 回波與流場» 豪雨特報統計» 雨量排序統計» 雨量監測» CWB雨量預報» 一週雨量預報» 雨量示警» 災害警戒» 縣市示警» 全球模式» 水氣通量指標» 梅雨監測指標(每一個都要按)/定量降雨預報QPF整合實驗平台</span>
+</span>
+        <iframe src="https://www.cwa.gov.tw/V8/C/P/QPF.html" style="height:2400px; overflow:hidden;" scrolling="no"onload="checkIframe(this)"></iframe>
+        <iframe src="https://www.cwa.gov.tw/V8/C/M/tide_height.html" style="height: 680px; overflow:hidden;" scrolling="no" onload="checkIframe(this)"></iframe>
+        <iframe src="https://www.cwa.gov.tw/V8/C/M/OBS_Marine_plot.html?MID=C4L01"style="height: 1650px; overflow:hidden;" scrolling="no" onload="checkIframe(this)"></iframe>
+        <iframe src="https://www.cwa.gov.tw/V8/C/M/OBS_Marine_plot.html?MID=C4L02"style="height: 1650px; overflow:hidden;" scrolling="no" onload="checkIframe(this)"></iframe>
+        <iframe src="https://fhy.wra.gov.tw/fhyv2/monitor/floodMap"style="height:1530px; overflow:hidden;" scrolling="no" onload="checkIframe(this)"></iframe>
+        <iframe src="https://floodsolution.aiot.ing/"height: 1500px; overflow:hidden;" scrolling="no" onload="checkIframe(this)"></iframe>
+        <iframe src="https://www.cwa.gov.tw/V8/C/W/graph_collection.html"style="height:1050px; overflow:hidden;" scrolling="no" onload="checkIframe(this)"></iframe>
+        <iframe src="https://watch.ncdr.nat.gov.tw/watch_page_rain"style="height:12600px; overflow:hidden;" scrolling="no" onload="checkIframe(this)"></iframe>
+        <iframe src="https://watch.ncdr.nat.gov.tw/watch_rain_mms"style="height:4050px; overflow:hidden;" scrolling="no" onload="checkIframe(this)"></iframe>
+    </div>
+
+    <script>
+        function checkIframe(iframe) {
+            if (!iframe.contentWindow || !iframe.contentWindow.document.body) {
+                iframe.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
